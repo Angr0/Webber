@@ -1,15 +1,28 @@
-const hideScrollbarSwitch = document.querySelector('.hideScrollbarSwitch')
-const stateText = document.querySelector('.stateLabel')
+const scrollbarHidingSwitch = document.querySelector('.hideScrollbarSwitch');
+//----------------------  TO DELETE  -----------------------------
+const stateText = document.querySelector('.stateLabel');
+//----------------------------------------------------------------
 
-hideScrollbarSwitch.addEventListener('change', ManageScrollbar)
+window.onload = LoadScrollbarState;
+scrollbarHidingSwitch.addEventListener('change', ManageSwitch);
 
-window.onload = ManageScrollbar
+function LoadScrollbarState(){
+    chrome.storage.local.get(["isScrollbarHidden"]).then((result) => {
+        ChangeScrollbarVisibility(result.isScrollbarHidden);
+        scrollbarHidingSwitch.checked = result.isScrollbarHidden;
+    });
+}
 
-function ManageScrollbar(){
-    if (hideScrollbarSwitch.checked){
-        stateText.innerHTML = "HIDDEN"
+function ManageSwitch(){
+    chrome.storage.local.set({'isScrollbarHidden': scrollbarHidingSwitch.checked});
+    ChangeScrollbarVisibility(scrollbarHidingSwitch.checked);
+}
+
+function ChangeScrollbarVisibility(isHidden){
+    if (isHidden){
+        stateText.innerHTML = "Scrollbar HIDDEN";
     }
     else {
-        stateText.innerHTML = "VISIBLE"
+        stateText.innerHTML = "Scrollbar VISIBLE";
     }
 }
