@@ -15,5 +15,11 @@
   "incognito": "split",
   "permissions": [
     "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["scrollbarHideElement.css"]
+    }
   ]
 }
