@@ -1,8 +1,4 @@
 const scrollbarHidingSwitch = document.querySelector('.hideScrollbarSwitch');
-//----------------------  TO DELETE  -----------------------------
-const stateText = document.querySelector('.stateLabel');
-//----------------------------------------------------------------
-
 window.onload = LoadScrollbarState;
 scrollbarHidingSwitch.addEventListener('change', ManageSwitch);
 
@@ -18,11 +14,27 @@ function ManageSwitch(){
     ChangeScrollbarVisibility(scrollbarHidingSwitch.checked);
 }
 
+async function getTabId(){
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    let [tab] = await chrome.tabs.query(queryOptions);
+    return tab.id;
+}
+
 function ChangeScrollbarVisibility(isHidden){
     if (isHidden){
-        stateText.innerHTML = "Scrollbar HIDDEN";
+        getTabId().then( tabId => {
+            chrome.scripting.insertCSS({
+                files: ["scrollbarHideElement.css"],
+                target: { tabId: tabId, allFrames : true }
+            });
+        })
     }
     else {
-        stateText.innerHTML = "Scrollbar VISIBLE";
+        getTabId().then( tabId => {
+            chrome.scripting.removeCSS({
+                files: ["scrollbarHideElement.css"],
+                target: { tabId: tabId, allFrames : true }
+            });
+        })
     }
 }
