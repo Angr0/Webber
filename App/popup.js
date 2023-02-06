@@ -1,4 +1,4 @@
-const scrollbarHidingSwitch = document.querySelector('.hideScrollbarSwitch');
+const scrollbarHidingSwitch = document.getElementById('hideScrollbarSwitch');
 scrollbarHidingSwitch.addEventListener('change', ManageScrollbarSwitch);
 window.onload = SetSwitchStateOnLoad;
 
