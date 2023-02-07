@@ -6,11 +6,12 @@ body{
     flex-flow: column;
     color: whitesmoke;
     background: rgb(35,39,42);
+    border: 1px solid black;
 }
 
 .logoArea{
-    background: rgb(15,200,196);
-    background: linear-gradient(180deg, rgba(15,200,196,1) 0%, rgba(33,153,127,1) 47%, rgba(35,39,42,1) 100%);
+    background: rgb(5,190,117);
+    background: linear-gradient(90deg, rgba(5,190,117,1) 0%, rgba(24,189,144,1) 25%, rgba(32,181,213,1) 75%, rgba(0,199,255,1) 100%);
     margin-bottom: 0;
     padding-bottom: 0;
     display: inline-block;
