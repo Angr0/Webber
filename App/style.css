@@ -6,7 +6,6 @@ body{
     flex-flow: column;
     color: whitesmoke;
     background: rgb(35,39,42);
-    border: 1px solid black;
 }
 
 .logoArea{
@@ -30,7 +29,7 @@ body{
 
 .optionTitle{
     font-family: Calibri, serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     width: 70%;
     float: left;
@@ -77,5 +76,5 @@ body{
     transition: all 0.3s ease-in;
 }
 .optionSwitchArea input[type="checkbox"]:checked + label::before {
-    background: #0fc8c4;
+    background: rgb(32,181,213);
 }
