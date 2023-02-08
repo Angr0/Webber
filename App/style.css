@@ -6,6 +6,7 @@ body{
     flex-flow: column;
     color: whitesmoke;
     background: rgb(35,39,42);
+    user-select: none;
 }
 
 .logoArea{
@@ -16,6 +17,14 @@ body{
     display: inline-block;
     width: 100%;
     height: 50%;
+}
+
+.logo{
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-user-drag: none;
 }
 
 .feature{
@@ -49,7 +58,9 @@ body{
 }
 .optionSwitchArea label {
     position: relative;
-    left: -17px;
+    padding-left: 3px;
+    padding-right: 40px;
+    padding-top: 10px;
     top: 8px;
 }
 .optionSwitchArea input[type="checkbox"] + label::before {
@@ -66,13 +77,13 @@ body{
     width: 20px;
     border-radius: 50%;
     position: absolute;
-    top: -6px;
-    left: -6px;
+    top: 4px;
+    left: -4px;
     background: white;
     transition: all 0.3s ease-in;
 }
 .optionSwitchArea input[type="checkbox"]:checked + label::after {
-    left: 15px;
+    left: 22px;
     transition: all 0.3s ease-in;
 }
 .optionSwitchArea input[type="checkbox"]:checked + label::before {

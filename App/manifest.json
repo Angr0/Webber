@@ -4,9 +4,10 @@
   "description": "An browser extension designed to customize some display settings",
   "version": "1.0",
   "icons": {
-    "16": "/Images/bigIcon16.png",
-    "48": "/Images/bigIcon48.png",
-    "128": "/Images/bigIcon128.png"
+    "16": "/Images/WebberLogo16.png",
+    "32": "/Images/WebberLogo32.png",
+    "48": "/Images/WebberLogo48.png",
+    "128": "/Images/WebberLogo128.png"
   },
   "action": {
     "default_popup": "index.html",
