@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Webber",
-  "description": "An browser extension designed to customize some display settings",
+  "name": "Webber | The scrollbar hider",
+  "description": "An browser extension designed to let you easily hide scrollbar",
   "version": "1.0",
   "icons": {
     "16": "/Images/WebberLogo16.png",
