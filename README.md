@@ -5,4 +5,4 @@ An browser extension designed to customize some display settings
 
 -> Your choices are saved locally on your PC. After loading a new page or restarting browser, chosen option will be applied automatically.
 
-The extension can be added to your browser here: https://chrome.google.com/webstore/detail/webber-the-scrollbar-hide/jiadeaflfegcmnjmcecffnloeochhcog?hl=pl
+You can add the extension to your browser here: https://chrome.google.com/webstore/detail/webber-the-scrollbar-hide/jiadeaflfegcmnjmcecffnloeochhcog?hl=pl
